@@ -1,12 +1,10 @@
-import * as React from "react";
-import { hot } from "react-hot-loader";
+import * as React from 'react';
+import { hot } from 'react-hot-loader';
 
 class App extends React.Component {
-    render() {
-        return (
-            <p>Hello There!</p>
-        );
-    }
+  render(): JSX.Element {
+    return <p>Hello There!</p>;
+  }
 }
 
-export default hot(module)(App)
+export default hot(module)(App);
