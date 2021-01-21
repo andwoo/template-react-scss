@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
-  const isDevelopment = argv.mode === 'development' || argv.mode === 'none';
+  const isDevelopment = argv.mode !== 'production';
   return {
     entry: {
       main: './src/index.ts',
@@ -11,6 +11,10 @@ module.exports = (env, argv) => {
     devtool: 'inline-source-map',
     devServer: {
       contentBase: './dist',
+      compress: true,
+      historyApiFallback: true,
+      open: true,
+      overlay: true
     },
     plugins: [
       new CleanWebpackPlugin({
@@ -18,12 +22,13 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         title: isDevelopment ? 'Development Build' : 'Production Build',
+        template: './template.html'
       }),
     ],
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -47,7 +52,7 @@ module.exports = (env, argv) => {
       ]
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js', '.json'],
     },
   }
 };

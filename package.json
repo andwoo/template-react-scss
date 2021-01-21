@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npx webpack --config webpack.config.js --mode development",
-    "build:watch": "npx webpack serve --open --config webpack.config.js --mode development --watch",
+    "build:watch": "npx webpack serve --config webpack.config.js --mode development --watch",
     "build:prod": "npx webpack --config webpack.config.js --mode production",
     "serve": "npx webpack serve --open"
   },
