@@ -1,5 +1,6 @@
 # Custom
-build/
+dist/
+.DS_Store
 
 # Logs
 logs
@@ -108,5 +109,3 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
-
-.DS_Store
