@@ -6,13 +6,11 @@ module.exports = (env, argv) => {
   const isDevelopment = argv.mode !== 'production';
   return {
     entry: {
-      main: './src/index.ts',
+      main: './src/Main.tsx',
     },
     devtool: 'inline-source-map',
     devServer: {
       contentBase: './dist',
-      compress: true,
-      historyApiFallback: true,
       open: true,
       overlay: true
     },
