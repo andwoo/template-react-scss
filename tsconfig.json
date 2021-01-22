@@ -4,12 +4,14 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "removeComments": true,
-    "module": "es6",
+    "module": "commonjs",
     "target": "es5",
     "jsx": "react",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": [
     "node_modules"

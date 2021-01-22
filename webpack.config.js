@@ -12,7 +12,8 @@ module.exports = (env, argv) => {
     devServer: {
       contentBase: './dist',
       open: true,
-      overlay: true
+      overlay: true,
+      hot: true
     },
     plugins: [
       new CleanWebpackPlugin({
@@ -51,6 +52,9 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js', '.json'],
+      alias: {
+        'react-dom': '@hot-loader/react-dom'
+      }
     },
   }
 };

@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
 
 const App = (): JSX.Element => {
@@ -7,4 +8,4 @@ const App = (): JSX.Element => {
     </div>
   )
 }
-export default App;
+export default hot(App);
