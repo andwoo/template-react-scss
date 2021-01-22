@@ -6,6 +6,6 @@ const App = (): JSX.Element => {
     <div>
       <p>Hello There!</p>
     </div>
-  )
-}
+  );
+};
 export default hot(App);
